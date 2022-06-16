@@ -28,7 +28,7 @@ op_264e5b20_a85d_4de2_bc21_39778d17e301 = KubernetesPodOperator(
     ],
     task_id="convert_nb",
     in_cluster=True,
-    config_file="None",
+    config_file="",
     dag=dag,
 )
 
