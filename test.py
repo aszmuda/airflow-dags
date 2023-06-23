@@ -19,7 +19,22 @@ def tutorial_taskflow_api():
     located
     [here](https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html)
     """
-    @task()
+
+    executor_config={
+        "pod_override": k8s.V1Pod(
+            spec=k8s.V1PodSpec(
+                containers=[
+                    k8s.V1Container(
+                        name="base",
+                        image="quay.io/modast/airflow:v2.6.1-6",
+                        imagePullPolicy="IfNotPresent"
+                        ],
+                    )
+                ],
+            )
+        ),
+    }
+    @task(executor_config=executor_config)
     def extract():
         """
         #### Extract task
