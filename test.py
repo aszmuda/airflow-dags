@@ -4,6 +4,8 @@ import json
 import pendulum
 
 from airflow.decorators import dag, task
+from kubernetes.client import models as k8s
+
 @dag(
     schedule=None,
     start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
