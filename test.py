@@ -28,11 +28,10 @@ def tutorial_taskflow_api():
                         name="base",
                         image="quay.io/modast/airflow:v2.6.1-6",
                         imagePullPolicy="IfNotPresent"
-                        ],
                     )
                 ],
             )
-        ),
+        )
     }
     @task(executor_config=executor_config)
     def extract():
