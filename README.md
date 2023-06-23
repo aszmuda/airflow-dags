@@ -1,2 +1,0 @@
-# airflow-dags
-Airflow DAGs
