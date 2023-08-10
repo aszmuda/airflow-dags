@@ -28,7 +28,7 @@ def tutorial_taskflow_api():
                 containers=[
                     k8s.V1Container(
                         name="base",
-                        image="quay.io/modast/airflow:v2.6.1-6"
+                        image="quay.io/modast/airflow:v2.6.3-8"
                     )
                 ],
             )
