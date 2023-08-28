@@ -1,0 +1,3 @@
+[submodule "airflow-submodule"]
+	path = airflow-submodule
+	url = https://github.com/aszmuda/airflow-submodule.git
