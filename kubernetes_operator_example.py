@@ -11,8 +11,8 @@ with DAG(
     task = KubernetesPodOperator(
         namespace="mds",
         image="registry.access.redhat.com/ubi9/ubi-minimal:9.2-717",
-        cmds=["bash", "-cx"],
-        arguments=["echo", "10"],
+        cmds=["bash", "-c"],
+        arguments=["date"],
         name="airflow-test-pod",
         task_id="task",
         on_finish_action="delete_pod",
