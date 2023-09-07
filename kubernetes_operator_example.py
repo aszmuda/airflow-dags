@@ -18,6 +18,7 @@ with DAG(
         on_finish_action="delete_pod",
         in_cluster=True,
         get_logs=True,
+        deferrable=True
     )
 
     task
