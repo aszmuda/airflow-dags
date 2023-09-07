@@ -12,7 +12,7 @@ with DAG(
         namespace="mds",
         image="registry.access.redhat.com/ubi9/ubi-minimal:9.2-717",
         cmds=["bash", "-c"],
-        arguments=["sleep","5m"],
+        arguments=["sleep 5m"],
         name="airflow-test-pod",
         task_id="task",
         on_finish_action="delete_pod",
