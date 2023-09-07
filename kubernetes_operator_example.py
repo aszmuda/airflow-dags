@@ -1,7 +1,6 @@
 from pendulum import datetime
-from airflow.configuration import conf
-from airflow.decorators import dag, task
-import random
+from airflow import DAG
+from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperator
 
 with DAG(
     dag_id="kubernetes_operator_example",
